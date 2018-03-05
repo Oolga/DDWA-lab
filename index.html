@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="bootstrap-button-ie-fix.css"> 
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css"> <!-- Optional theme -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+    <!--<link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-grid.css">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="Worker.js"></script>
+    <style>
+        /*input:invalid {
+            border: 2px solid red;
+        }*/
+    </style>
+</head>
+<body>
+    <div class="container" style="top: 20px;">
+        <button class="btn btn-default" onclick="DDWAApp.MakeupManager.ElementsEventsProvider.moveToListWorkers(); return false;">Список</button>
+        <div class="row">
+            <div class="col-md-6 offset-md-2">
+                <div id="showPart">
+                    <table id="workersList" class="table  table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Имя</th>
+                                <th>Фамилия</th>
+                                <th>Отчество</th>
+                                <th>Женат/Замужем</th>
+                                <th>Пол</th>
+                                <th>Должность</th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-2">
+                <div id="detailsPart">
+                    <table id="tableDetails" class="table  table-bordered"></table>
+                </div>
+                <button id="createWorker" class="btn btn-default" onclick="DDWAApp.MakeupManager.ElementsEventsProvider.moveToCreateWorker(true); return false;">Создать</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-2">
+                <div id="createPart" style="margin: 10px; display: none;" class="panel panel-default">
+                    <div class="panel-body">
+                        <div id="createButtons">
+                            <button id="createFactoryWorker" class="btn btn-default" onclick="DDWAApp.MakeupManager.ElementsEventsProvider.moveToCreateWorker(true); return false;">Работник фабрики</button>
+                            <button id="createAirdromeWorker" class="btn btn-default" onclick="DDWAApp.MakeupManager.ElementsEventsProvider.moveToCreateWorker(false); return false;">Работник аэродрома</button>
+                        </div>
+                        <form id="formWorker" onsubmit="return false;" role="form" novalidate></form>
+                    </div>
+                </div>
+
+             </div>
+         </div>
+    </div>
+</body>
+</html>

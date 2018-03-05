@@ -1,0 +1,40 @@
+{
+  "workers": [
+    {
+      "firstname": "Татьянамва",
+      "lastname": "Шихова",
+      "middlename": "Александровна",
+      "type": "false",
+      "position": "Стюардеса",
+      "gender": "М",
+      "isMarried": false,
+      "numberOfHoursInAir": "240",
+      "oldWorkplaces": "Airdrome3,Airdrome2",
+      "id": 2
+    },
+    {
+      "firstname": "ававыфвфыв",
+      "lastname": "вавп",
+      "middlename": "авпавп",
+      "type": "true",
+      "position": "вапавп",
+      "gender": "М",
+      "isMarried": false,
+      "experience": "324324",
+      "salary": "21324",
+      "id": 4
+    },
+    {
+      "firstname": "DSD",
+      "lastname": "SADAD",
+      "middlename": "GFJGJH",
+      "type": "false",
+      "position": "hghjg",
+      "gender": "М",
+      "isMarried": false,
+      "numberOfHoursInAir": "56776",
+      "oldWorkplaces": "kjhgjkk",
+      "id": 7
+    }
+  ]
+}

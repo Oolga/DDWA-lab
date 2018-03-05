@@ -541,17 +541,6 @@ DDWAApp.Helpers.WorkerIterator = {
     }
 };
 
-DDWAApp.Helpers.WebWorker = function (){
-    var self = this || {};
-    
-    self.start = ()=>{
-        
-    };
-
-    return self;
-}();
-
-
 DDWAApp.Helpers.SearchHelper = function(){
     let self = this || {};
 
@@ -573,22 +562,6 @@ DDWAApp.Helpers.SearchHelper = function(){
 DDWAApp.WorkersService = function () {
 	let self = this || {};
 
-    self.getCount = async ()=>{
-        return new Promise((resolve, reject)=>{
-            let xhr = new XMLHttpRequest();
-
-            xhr.open(method, DDWAApp.CONSTANTS.SERVICE_URL + '?_end=0', true);
-            xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
-
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState != 4) return;
-                debugger;
-                resolve(xhr.getResponseHeader('X-Total-Count'));
-            };
-
-            xhr.send(JSON.stringify(body));
-        });
-    };
 
 	self.deleteWorker = function (id) {
         return new Promise((resolve, reject)=>{
@@ -598,9 +571,9 @@ DDWAApp.WorkersService = function () {
         });
 	};
 
-	self.getAll = async ()=>{
-      //  return new Promise((resolve, reject)=>{
-            var data = await sendGetMethod('GET', '');//.then((data)=>{
+	self.getAll = ()=>{
+        return new Promise((resolve, reject)=>{
+                    sendGetMethod('GET', '').then((data)=>{
                     let workers = [];
                     DDWAApp.Helpers.WorkerIterator.workers = data; 
 
@@ -608,9 +581,9 @@ DDWAApp.WorkersService = function () {
                         let worker = DDWAApp.Mappers.FactoryMapper.mapJSONToWorker(item);
                         workers.push(worker);
                     }
-                    return workers;
-          //  });
-      //  });
+                    resolve(workers);
+            });
+        });
 	};
 
 	self.addWorker = (data)=>{
@@ -679,7 +652,6 @@ DDWAApp.WorkersService = function () {
 }();
 
 document.addEventListener("DOMContentLoaded", function (event) {
-    debugger;
 	DDWAApp.WorkersService.getAll().then((data)=>{
         DDWAApp.MakeupManager.MakeupCreator.createWorkersTable(data);
     });

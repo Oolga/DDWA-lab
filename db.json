@@ -1,0 +1,28 @@
+{
+  "workers": [
+    {
+      "firstname": "Татьяна",
+      "lastname": "Шиховаааа",
+      "middlename": "фыаввыфа",
+      "type": "false",
+      "position": "Стюардеса",
+      "gender": "М",
+      "isMarried": false,
+      "numberOfHoursInAir": "2401",
+      "oldWorkplaces": "Airdrome3,Airdrome2",
+      "id": 2
+    },
+    {
+      "firstname": "аааааи",
+      "lastname": "ыавыа",
+      "middlename": "выа",
+      "type": "true",
+      "position": "аываы",
+      "gender": "М",
+      "isMarried": false,
+      "experience": "1111",
+      "salary": "43545",
+      "id": 3
+    }
+  ]
+}

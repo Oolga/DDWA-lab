@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+
+ <!--<style>
+     input.error {
+    border: 1px solid #FF2323;
+}
+label.error{
+    color: red;
+}
+     </style>-->
+</head>
+<body>
+    <div class="container" style="margin-top: 20px;">
+        <div class="row">
+            <div id="logo" class="col-md-9 offset-md-2"></div>
+        </div>
+        <div class="row" style="margin-bottom: 20px; margin-top:20px;">
+                <div class="col-md-1 offset-md-2">
+                    <button class="btn btn-default" id="moveToListButton" >Список</button>                
+                </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-2">
+                <div id="showPart">
+                    <table id="workersList" class="table  table-bordered">
+                        <thead>
+                            <tr>
+                                <th data-name="firstname">Имя</th>
+                                <th data-name="lastname">Фамилия</th>
+                                <th data-name="middlename">Отчество</th>
+                                <th data-name="married">Женат/Замужем</th>
+                                <th data-name="gender">Пол</th>
+                                <th data-name="position">Должность</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-2">
+                <div id="detailsPart">
+                    <table id="tableDetails" class="table  table-bordered"></table>
+                </div>
+                <button id="createWorker" class="btn btn-default">Создать</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-2">
+                <div id="createPart" style="margin: 10px; display: none;" class="panel panel-default">
+                    <div class="panel-body">
+                        <div id="createButtons">
+                            <button id="createFactoryWorker" class="btn btn-default" onclick="DDWAApp.MakeupManager.ElementsEventsProvider.moveToCreateWorker(true); return false;">Работник фабрики</button>
+                            <button id="createAirdromeWorker" class="btn btn-default" onclick="DDWAApp.MakeupManager.ElementsEventsProvider.moveToCreateWorker(false); return false;">Работник аэродрома</button>
+                        </div>
+                        <form id="formWorker" onsubmit="return false;" role="form" novalidate></form>
+                    </div>
+                </div>
+
+             </div>
+         </div>
+         <div class="row">
+                <div id="banner" class="col-md-9 offset-md-2"></div>
+        </div>
+    </div>
+</body>
+</html>

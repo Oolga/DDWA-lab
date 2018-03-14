@@ -1,8 +1,14 @@
 import {WorkerIterator} from '../helpers/worker-iterator';
 import {moveToWorkerDetails, moveToUpdateWorker, moveToDeleteWorker, moveToListWorkers, createWorkerClick, updateWorkerClick} from './elements-events-manager';
 import { sortBy } from '../helpers/sort-helper';
+import { setImage } from '../helpers/image-helper';
 import * as CONSTANTS from '../constants';
 
+
+export function initImages(logo, banner){
+    setImage(document.getElementById('logo'), logo, {height: 100, width: 150});
+    setImage(document.getElementById('banner'), banner, {height: 100, width: 900});
+}
 export function createWorkersTable(workers){
         let table = document.getElementById(CONSTANTS.TABLE_ID);
         setSourtByHeaders(table, workers);
